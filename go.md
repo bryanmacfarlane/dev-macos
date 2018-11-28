@@ -60,12 +60,15 @@ Preferences (or wrench bottom right).  Set GOPATH for project and uncheck from e
 
 ### Debugging Stdin Issues
 
-Version 2018.2:
+Version 2018.2 (use this):
 Preferences | Build, Execution, Deployment | Debugger and enable the Use native backend option.
 
 Enable the PTY mode for the run configuration as this is not something that is supported by default. Press CTRL|Command + ALT + SHIFT + / then go to Registry, start typing run.processes.with.pty and enable this option.
 
-Version 2018.3:
+Version 2018.3: 
+
+This doesn't work because of [stdin debugging](https://youtrack.jetbrains.com/issue/GO-4264) needs [native backend](https://github.com/derekparker/delve/issues/1112)
+
 https://github.com/derekparker/delve/blob/master/Documentation/installation/osx/install.md#compiling-the-native-backend
 
 Then edit custom properties of IDE: Help | Edit Custom Properties and add there two lines:

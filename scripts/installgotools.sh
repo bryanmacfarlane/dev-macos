@@ -2,7 +2,7 @@
 
 set -e
 
-pushd ${TOOLS_ROOT} > /dev/nul
+pushd ${TOOLS_ROOT} > /dev/null
 
 export GOPATH=${TOOLS_ROOT}
 

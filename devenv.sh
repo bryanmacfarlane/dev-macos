@@ -86,6 +86,11 @@ if [ -f ${goPath} ]; then
 	export GOPATH=~/Projects
 fi
 
+golandpath='/Applications/GoLand.app'
+if [ -d ${golandpath} ]; then
+	alias goland='open ${golandpath}'
+fi
+
 #---------------------------------------------
 # Docker
 #---------------------------------------------

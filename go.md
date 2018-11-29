@@ -42,6 +42,8 @@ Set go.toolsGoPath to Tools/bin path
 
 ![settings](res/gousersettings.png)
 
+ISSUE: Can't debug a [program using stdin](https://github.com/Microsoft/vscode-go/issues/219#issuecomment-192164367).  
+
 ## GoLand
 
 Open.  From terminal:

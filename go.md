@@ -52,13 +52,52 @@ Open.  From terminal:
 $ goland
 ```
 
-### Project Level Preferences
-
-Create a new project (new folder or existing)
+Create a new project (new folder or existing):
 
 Preferences (or wrench bottom right).  Set GOPATH for project and uncheck from env.  This means you can launch from anywhere
 
 ![pathprefs](res/goland-gopath.png)
+
+## Debugging with Delve
+
+[Delve from the cmdline](https://lincolnloop.com/blog/debugging-go-code/)
+
+```bash
+[dev] ~/Study/go/src/helloworld$ dlv debug main.go -- arg1
+Type 'help' for list of commands.
+(dlv) break main.go:9
+Breakpoint 1 set at 0x10ae9e4 for main.main() ./main.go:9
+(dlv) break main.go:10
+Breakpoint 2 set at 0x10aeaa0 for main.main() ./main.go:10
+(dlv) continue
+> main.main() ./main.go:9 (hits goroutine(1):1 total:1) (PC: 0x10ae9e4)
+     4:		"fmt"
+     5:	)
+     6:	
+     7:	func main() {
+     8:		msg := "Hellow World!"
+=>   9:		fmt.Println(msg)
+    10:		fmt.Println("")
+    11:	}
+(dlv) print msg
+"Hellow World!"
+(dlv) continue
+Hellow World!
+> main.main() ./main.go:10 (hits goroutine(1):1 total:1) (PC: 0x10aeaa0)
+     5:	)
+     6:	
+     7:	func main() {
+     8:		msg := "Hellow World!"
+     9:		fmt.Println(msg)
+=>  10:		fmt.Println("")
+    11:	}
+(dlv) continue
+
+Process 6739 has exited with status 0
+(dlv) exit
+Process 6739 has exited with status 0
+[dev] ~/Study/go/src/helloworld$ 
+```
 
 ### Debugging Stdin Issues
 

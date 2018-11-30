@@ -28,6 +28,29 @@ $ which gocode
 
 See scripts/installgotools.sh
 
+## Command Line Scripts
+
+### gob
+
+go build, fmt and install to bin (in path)
+
+### gobr
+
+gob and then run
+
+```bash
+[dev] $ gob
+building helloworld
+
+[dev] $ which helloworld
+/Users/bryan/Study/go/bin/helloworld
+
+[dev] $ gobr
+building helloworld
+running helloworld
+Hello World!
+```
+
 ## VS Code
 
 ## Install plug in

@@ -25,9 +25,11 @@ alias proj="pushd ${PROJ_ROOT} > /dev/null && export GOPATH=${PROJ_ROOT}"
 # Study
 #---------------------------------------------
 export STUDY_ROOT=~/Study
-mkdir -p $STUDY_ROOT/src
-mkdir -p $STUDY_ROOT/bin
-export PATH="$STUDY_ROOT/bin:$PATH"
+
+# go study
+mkdir -p $STUDY_ROOT/go/src
+mkdir -p $STUDY_ROOT/go/bin
+export PATH="$STUDY_ROOT/go/bin:$PATH"
 alias study="pushd ${STUDY_ROOT} > /dev/null && export GOPATH=${STUDY_ROOT}/go"
 
 #---------------------------------------------

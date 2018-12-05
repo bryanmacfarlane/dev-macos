@@ -30,22 +30,22 @@ See scripts/installgotools.sh
 
 ## Command Line Scripts
 
-### gob
+### gb
 
 go build, fmt and install to bin (in path)
 
-### gobr
+### gr
 
-gob and then run
+gb and then run
 
 ```bash
-[dev] $ gob
+[dev] $ gb
 building helloworld
 
 [dev] $ which helloworld
 /Users/bryan/Study/go/bin/helloworld
 
-[dev] $ gobr
+[dev] $ gr
 building helloworld
 running helloworld
 Hello World!

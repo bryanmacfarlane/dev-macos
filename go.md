@@ -53,7 +53,7 @@ Hello World!
 
 ## VS Code
 
-## Install plug in
+### Install plug in
 
 Install "Go for Visual Studio Code" (ms-vscode.go)
 
@@ -65,7 +65,41 @@ Set go.toolsGoPath to Tools/bin path
 
 ![settings](res/gousersettings.png)
 
-ISSUE: Can't debug a [program using stdin](https://github.com/Microsoft/vscode-go/issues/219#issuecomment-192164367).  
+  
+
+### Debug
+
+[VS Code Debug Wiki](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)
+
+Start remote debugger in the prog dir (addresses STDIN issue below):
+
+```bash
+$ cd someprogram
+$ gd
+API server listening at: [::]:2345
+...
+```
+
+Create a 'Remote' config in VS Code, set breakpoints and debug.
+
+```bash
+    "configurations": [
+        {
+            "name": "Remote",
+            "type": "go",
+            "request": "launch",            
+            "mode": "remote",
+            "program": "${fileDirname}",
+            "remotePath": "${fileDirname}",
+            "port": 2345,
+            "host": "127.0.0.1",            
+            "env": {},
+            "apiVersion": 1,
+            "args": []
+        }
+```
+
+ISSUE: Can't debug a [program using stdin](https://github.com/Microsoft/vscode-go/issues/219#issuecomment-192164367).
 
 ## GoLand
 
@@ -81,7 +115,7 @@ Preferences (or wrench bottom right).  Set GOPATH for project and uncheck from e
 
 ![pathprefs](res/goland-gopath.png)
 
-## Debugging with Delve
+## Debugging with Delve in Terminal
 
 [Delve from the cmdline](https://lincolnloop.com/blog/debugging-go-code/)
 

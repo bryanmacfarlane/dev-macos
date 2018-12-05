@@ -86,6 +86,8 @@ if [ -f ${goPath} ]; then
 
 	#default go path
 	export GOPATH=~/Projects
+
+	alias gd="dlv debug --headless --listen=:2345 --log $@"
 fi
 
 golandpath='/Applications/GoLand.app'

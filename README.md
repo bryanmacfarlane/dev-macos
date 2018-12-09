@@ -40,6 +40,14 @@ Tools are contained here in the bin directory.  Type `tools` to jump here.
 
 As an example all the go tools will be installed in ~/Tools/bin which both projects and study will use.
 
+### ~/.bashrc
+
+Add alias to bashrc.  This is useful if you're using from outside standard terminal.  For example, in an editor terminal window.
+
+```bash
+alias godev="source ~/dev-macos/devenv.sh"
+```
+
 ## Go
 
 Details on setting up go tools for Projects, Study and tools such as VS Code and GoLand.

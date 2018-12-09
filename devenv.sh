@@ -87,7 +87,9 @@ if [ -f ${goPath} ]; then
 	#default go path
 	export GOPATH=~/Projects
 
-	alias gd="dlv debug --headless --listen=:2345 --log $@"
+	# pass args to program, e.g.
+	# gd arg1 arg2
+	alias gd="dlv debug --headless --listen=:2345 --log -- $@"
 fi
 
 golandpath='/Applications/GoLand.app'
@@ -128,8 +130,6 @@ if [ -d "${SUBLIME_PATH}" ]; then
 	export SUBLIME_VERSION=`/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl --version`
 	echo "sublime: ${SUBLIME_VERSION}"
 fi
-
-
 
 export vsPath="/Applications/Visual Studio Code.app"
 if [ -d "${vsPath}" ]; then

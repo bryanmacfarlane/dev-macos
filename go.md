@@ -80,6 +80,12 @@ API server listening at: [::]:2345
 ...
 ```
 
+pass arguments to the program being debugged:
+
+```bash
+$ gd arg1 arg2
+```
+
 Create a 'Remote' config in VS Code, set breakpoints and debug.
 
 ```bash

@@ -89,7 +89,7 @@ if [ -f ${goPath} ]; then
 
 	# pass args to program, e.g.
 	# gd arg1 arg2
-	alias gd="dlv debug --headless --listen=:2345 --log -- $@"
+	alias gd="dlv debug --headless --listen=:2345 -- $@"
 fi
 
 golandpath='/Applications/GoLand.app'

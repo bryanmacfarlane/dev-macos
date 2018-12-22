@@ -59,13 +59,19 @@ Install "Go for Visual Studio Code" (ms-vscode.go)
 
 Set tools bin path in VS Code
 
-Code, Preferences, Settings
+Code, Preferences, Settings, User settings
 ... Open settings.json
-Set go.toolsGoPath to Tools/bin path
+Set go.toolsGoPath to Tools path
 
-![settings](res/gousersettings.png)
+```javascript
+{
+    "git.ignoreMissingGitWarning": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "go.toolsGopath": "/Users/bryan/Tools"
+}
+```
 
-  
+note: I used to point directly to Tools/bin but a recent vscode go plugin wants me to point to Tools and bin is implied.
 
 ### Debug
 

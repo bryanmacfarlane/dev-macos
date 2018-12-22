@@ -9,7 +9,9 @@ export GOPATH=${TOOLS_ROOT}
 # https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on
 
 echo "Installing gocode (auto completion) ..."
-go get -u github.com/nsf/gocode
+go get -u github.com/mdempsky/gocode
+# it points to a fork for modules (vgo) support
+# github.com/stamblerre/gocode
 
 echo "Installing gooutline (symbol search current file) ..."
 go get -u github.com/ramya-rao-a/go-outline

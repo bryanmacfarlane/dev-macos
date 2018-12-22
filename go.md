@@ -73,6 +73,24 @@ Set go.toolsGoPath to Tools path
 
 note: I used to point directly to Tools/bin but a recent vscode go plugin wants me to point to Tools and bin is implied.
 
+### Modules
+
+Modules are experimental in go 1.11
+
+[Modules Overview](https://github.com/golang/go/wiki/Modules)
+
+unset $GOPATH.  shortcut gomod provided
+```bash
+$ gomod
+$ echo $GOPATH
+
+$
+```
+
+For `gr` shortcut, keep the folder name the executable name.  For example, in the modules walkthrough above, I named package hellomod in the hellomod folder (instead of hello in the mod folder).  A good convention.
+
+Notice this commit added tools gocode-mod and godef-mod
+
 ### Debug
 
 [VS Code Debug Wiki](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)

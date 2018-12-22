@@ -10,8 +10,9 @@ export GOPATH=${TOOLS_ROOT}
 
 echo "Installing gocode (auto completion) ..."
 go get -u github.com/mdempsky/gocode
-# it points to a fork for modules (vgo) support
-# github.com/stamblerre/gocode
+
+echo "Installing gocode-gomod (auto completion) module support ..."
+go get -u github.com/stamblerre/gocode
 
 echo "Installing gooutline (symbol search current file) ..."
 go get -u github.com/ramya-rao-a/go-outline
@@ -36,6 +37,9 @@ go get -u golang.org/x/lint/golint
 
 echo "Installing godef (go to definition) ..."
 go get -u github.com/rogpeppe/godef
+
+echo "Installing godef-gomod (go to definition) module support ..."
+go get -u github.com/ianthehat/godef
 
 echo "Installing debugger (dlv) ..."
 go get -u github.com/derekparker/delve/cmd/dlv

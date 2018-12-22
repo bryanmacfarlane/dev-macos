@@ -40,6 +40,12 @@ mkdir -p $TOOLS_ROOT/bin
 export PATH="$TOOLS_ROOT/bin:$PATH"
 alias tools="pushd ${TOOLS_ROOT} > /dev/null && export GOPATH=${TOOLS_ROOT}"
 
+# when working with modules (go 1.11+), GOPATH should not be set
+export GO_ROOT=~/go
+mkdir -p $GO_ROOT/bin
+export PATH="$GO_ROOT/bin:$PATH"
+alias gomod="unset GOPATH"
+
 #---------------------------------------------
 # Banner
 #---------------------------------------------

@@ -1,7 +1,7 @@
 set -e
 APPNAME=${PWD##*/}
-echo building $APPNAME
+echo "building ${GOOUTPATH}${APPNAME}"
 gofmt -w .
-go build
+go build -o "${GOOUTPATH}${APPNAME}"
 go install
 

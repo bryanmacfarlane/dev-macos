@@ -24,21 +24,11 @@ The scripts setup three workspaces
 
 Projects are contained here.  Type `proj` to jump here.
 
-Environments will be setup such as go setting `GOPATH` properly.
-
 ### ~/Study
 
 Study material is contained here.  Type `study` to jump here and setup the environment.
 
-Environments will be setup such as go setting `GOPATH` properly (~/Study/go)
-
 Motivation was to not have ~/Projects littered with a ton of small study projects.
-
-### ~/Tools
-
-Tools are contained here in the bin directory.  Type `tools` to jump here.
-
-As an example all the go tools will be installed in ~/Tools/bin which both projects and study will use.
 
 ### ~/.bashrc
 

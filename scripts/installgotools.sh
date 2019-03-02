@@ -2,10 +2,6 @@
 
 set -e
 
-pushd ${TOOLS_ROOT} > /dev/null
-
-export GOPATH=${TOOLS_ROOT}
-
 # https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on
 
 echo "Installing gocode (auto completion) ..."
@@ -52,7 +48,3 @@ go get -u github.com/golang/dep/cmd/dep
 
 echo "Installing go vgo package manager ..."
 go get -u golang.org/x/vgo
-
-
-
-ls -la bin

@@ -19,7 +19,7 @@ export PROJ_ROOT=~/Projects
 mkdir -p $PROJ_ROOT/src
 mkdir -p $PROJ_ROOT/bin
 export PATH="$PROJ_ROOT/bin:$PATH"
-alias proj="pushd ${PROJ_ROOT} > /dev/null && export GOPATH=${PROJ_ROOT}"
+alias proj="pushd ${PROJ_ROOT} > /dev/null"
 
 #---------------------------------------------
 # Study
@@ -29,8 +29,11 @@ export STUDY_ROOT=~/Study
 # go study
 mkdir -p $STUDY_ROOT/go/src
 mkdir -p $STUDY_ROOT/go/bin
+# gb and gr shortcuts use this out path if set. 
+# let's not pollute go bin of study bins
+export GOOUTPATH="$STUDY_ROOT/bin/"
 export PATH="$STUDY_ROOT/go/bin:$PATH"
-alias study="pushd ${STUDY_ROOT} > /dev/null && export GOPATH=${STUDY_ROOT}/go"
+alias study="pushd ${STUDY_ROOT} > /dev/null"
 
 #---------------------------------------------
 # Tools
@@ -38,13 +41,11 @@ alias study="pushd ${STUDY_ROOT} > /dev/null && export GOPATH=${STUDY_ROOT}/go"
 export TOOLS_ROOT=~/Tools
 mkdir -p $TOOLS_ROOT/bin
 export PATH="$TOOLS_ROOT/bin:$PATH"
-alias tools="pushd ${TOOLS_ROOT} > /dev/null && export GOPATH=${TOOLS_ROOT}"
+alias tools="pushd ${TOOLS_ROOT} > /dev/null"
 
-# when working with modules (go 1.11+), GOPATH should not be set
 export GO_ROOT=~/go
 mkdir -p $GO_ROOT/bin
 export PATH="$GO_ROOT/bin:$PATH"
-alias gomod="unset GOPATH"
 
 #---------------------------------------------
 # Banner
@@ -89,9 +90,6 @@ fi
 goPath=`which go`
 if [ -f ${goPath} ]; then
 	go version
-
-	#default go path
-	export GOPATH=~/Projects
 
 	# pass args to program, e.g.
 	# gd arg1 arg2

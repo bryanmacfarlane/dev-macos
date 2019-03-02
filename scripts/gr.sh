@@ -2,5 +2,6 @@ set -e
 
 gb
 APPNAME=${PWD##*/}
-echo running $APPNAME 
-$APPNAME "$@"
+APPPATH="${GOOUTPATH}${APPNAME}"
+echo running "${APPPATH}" 
+$APPPATH "$@"

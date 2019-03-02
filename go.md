@@ -2,13 +2,16 @@
 
 ## Prereqs
 
+GO 1.12 or above (now GOPATH and supports modules)
+[golang download](https://golang.org/dl/)  
+
 Always good to have latest command line tools and Xcode (LLDB debuggers etc..)
 
 [xcode](xcode.md)
 
 ## Tools
 
-Install tools with convenience script ...
+A script is provided as a convenience to install all the tools needed for code completion, debugging, modules, etc... 
 
 ```bash
 $ installgotools
@@ -30,6 +33,8 @@ See scripts/installgotools.sh
 
 ## Command Line Scripts
 
+Convenience shortcuts for building, running and debugging
+
 ### gb
 
 go build, fmt and install to bin (in path)
@@ -50,6 +55,10 @@ building helloworld
 running helloworld
 Hello World!
 ```
+
+### gd
+
+Start remote debugger for current go project.  See debugging below.
 
 ## VS Code
 
@@ -75,7 +84,7 @@ note: I used to point directly to Tools/bin but a recent vscode go plugin wants 
 
 ### Modules
 
-Modules are experimental in go 1.11
+Modules are now released with GO 1.12 and above
 
 [Modules Overview](https://github.com/golang/go/wiki/Modules)
 

@@ -66,39 +66,47 @@ Start remote debugger for current go project.  See debugging below.
 
 Install "Go for Visual Studio Code" (ms-vscode.go)
 
-Set tools bin path in VS Code
-
-Code, Preferences, Settings, User settings
-... Open settings.json
-Set go.toolsGoPath to Tools path
-
-```javascript
-{
-    "git.ignoreMissingGitWarning": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "go.toolsGopath": "/Users/bryan/Tools"
-}
-```
-
-note: I used to point directly to Tools/bin but a recent vscode go plugin wants me to point to Tools and bin is implied.
-
 ### Modules
 
 Modules are now released with GO 1.12 and above
 
 [Modules Overview](https://github.com/golang/go/wiki/Modules)
 
-unset $GOPATH.  shortcut gomod provided
-```bash
-$ gomod
-$ echo $GOPATH
+### HelloWorld in Study
 
-$
+```bash
+[dev] ~/Projects$ study
+[dev] ~/Study$ cd go
+[dev] ~/Study/go$ mkdir helloworld && cd helloworld
 ```
 
-For `gr` shortcut, keep the folder name the executable name.  For example, in the modules walkthrough above, I named package hellomod in the hellomod folder (instead of hello in the mod folder).  A good convention.
+Create a module  
+```bash
+[dev] ~/Study/go/helloworld$ go mod init github.com/you/helloworld
+go: creating new go.mod: module github.com/you/helloworld
+[dev] ~/Study/go/helloworld$ touch main.go
+```
 
-Notice this commit added tools gocode-mod and godef-mod
+edit main.go  
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Hello World!")
+}
+```
+
+build and run  
+```bash
+[dev] ~/Study/go/helloworld$ gr
+building /Users/bryan/Study/go/bin/helloworld
+running /Users/bryan/Study/go/bin/helloworld
+Hello World!
+```
 
 ### Debug
 

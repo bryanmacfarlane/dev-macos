@@ -31,7 +31,7 @@ mkdir -p $STUDY_ROOT/go/src
 mkdir -p $STUDY_ROOT/go/bin
 # gb and gr shortcuts use this out path if set. 
 # let's not pollute go bin of study bins
-export GOOUTPATH="$STUDY_ROOT/bin/"
+export GOOUTPATH="$STUDY_ROOT/go/bin/"
 export PATH="$STUDY_ROOT/go/bin:$PATH"
 alias study="pushd ${STUDY_ROOT} > /dev/null"
 

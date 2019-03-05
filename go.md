@@ -82,8 +82,8 @@ Modules are now released with GO 1.12 and above
 
 Create a module  
 ```bash
-[dev] ~/Study/go/helloworld$ go mod init github.com/you/helloworld
-go: creating new go.mod: module github.com/you/helloworld
+[dev] ~/Study/go/helloworld$ go mod init helloworld
+go: creating new go.mod: module helloworld
 [dev] ~/Study/go/helloworld$ touch main.go
 ```
 
@@ -99,6 +99,8 @@ func main() {
 	fmt.Println("Hello World!")
 }
 ```
+
+NOTE: adding a new line with fmt. should give you intellisense
 
 build and run  
 ```bash

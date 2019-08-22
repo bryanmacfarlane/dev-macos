@@ -4,7 +4,7 @@
 # -----------------------------------------------------------
 # Silver Aerogel, Courier New 15 pt, Opacity 85%, Blur 7%
 # In Shell tab: (this is the key that took me forever to figure out --rcfile)
-# Run Command: /bin/bash --rcfile ~/devosx/devenv.sh
+# Run Command: /bin/bash --rcfile ~/dev-macos/devenv.sh
 
 #SCRIPT_NAME=`basename $0`
 SCRIPT_DIR=`dirname ${BASH_SOURCE}`

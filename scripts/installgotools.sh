@@ -4,8 +4,8 @@ set -e
 
 # https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on
 
-echo "Installing gocode (auto completion) ..."
-go get -u github.com/mdempsky/gocode
+echo "Installing gopls (auto completion) module support ..."
+go get -u golang.org/x/tools/cmd/gopls
 
 echo "Installing gocode-gomod (auto completion) module support ..."
 go get -u github.com/stamblerre/gocode
@@ -43,8 +43,8 @@ go get -u github.com/derekparker/delve/cmd/dlv
 echo "Installing goreturns (formatting) ..."
 go get -u github.com/sqs/goreturns
 
-echo "Installing go dep package manager ..."
-go get -u github.com/golang/dep/cmd/dep
+# echo "Installing go dep package manager ..."
+# go get -u github.com/golang/dep/cmd/dep
 
-echo "Installing go vgo package manager ..."
-go get -u golang.org/x/vgo
+# echo "Installing go vgo package manager ..."
+# go get -u golang.org/x/vgo

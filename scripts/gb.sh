@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 APPNAME=${PWD##*/}
 echo "building ${GOOUTPATH}${APPNAME}"
